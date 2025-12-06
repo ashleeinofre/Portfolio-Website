@@ -1,27 +1,46 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
 body {
-    background-color: lightgrey;
+    background-color: white;
     min-width: 50vw;
+    margin:0;
+}
+.logo {
+    background-image: url(/Images/dark-blue-wide-background-with-radial-blurred-gradient-vector.jpg);
+    background-size: cover;
+    background-clip: text;
+    color: transparent;
+    animation: animate 20s linear infinite;
+    text-shadow: 0 0 0 rgba(152, 152, 152, 0.2);
+    margin: 10px auto;
+    transform: scale(.70);
+}
+@keyframes animate {
+    to{
+        background-position-x: -500px;
+    }
 }
 .nav-bar{
     background-color: #77abc8;
     border-radius: 45px;
     font-family: Outfit;
-    margin: 20px;
-    width: 50%;
-    opacity: 80%;
+    margin: 20px auto;
+    width: 65%;
     border: 1px solid rgb(255, 255, 255);
-    box-shadow: inset 0 0 5px rgba(0,0,0,0.25);
+    padding: 0px 10px;
 }
 .nav-con{
     display: flex;
     justify-content: center;
-    gap: 20px;
+    text-align: center;
+    align-items: center;
 }
 .nav-btn{
+    line-height: 1;
     display: inline-block;
-    text-align: center;
     border-radius: 35px;
     width: 100px;
     text-decoration: none;
@@ -39,17 +58,18 @@ body {
 /* Icons on contact < ------------------------------------------------------------------ >*/
 
 #contactBtn {
+    align-items: center;
     position: relative;
     overflow: hidden;
-    transition: width 0.35s ease;
-    width: 100px;
-    display: flex;          
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    width: 100px;         
     align-items: center;     
     gap: 10px;
 }
 
 #contactBtn.active {
-    width: 400px;
+    width: 210px;
+    text-align: left;
 }
 
 #socialIcons {
@@ -60,7 +80,7 @@ body {
     right: 15px;
     top: 50%;
     transform: translateY(-50%);
-    transition: opacity 0.3s ease;
+    transition: opacity 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     pointer-events: none; 
 }
 
