@@ -37,3 +37,14 @@ document.querySelectorAll('.nav-btn:not(#contactBtn)').forEach(button => {
         }
     });
 });
+
+  window.addEventListener('resize', () => {
+      navBar.style.transition = 'none';
+      if (window.innerWidth > 1125) {
+          navBar.classList.remove('active');
+      }
+      setTimeout(() => {
+          navBar.style.transition = '';
+      }, 100);
+  });
+  
