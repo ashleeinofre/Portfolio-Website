@@ -30,7 +30,6 @@ document.addEventListener('click', function(e) {
     }
 });
 
-
 document.querySelectorAll('.nav-btn:not(#contactBtn)').forEach(button => {
     button.addEventListener('click', function() {
         if (window.innerWidth <= 1125 && navBar.classList.contains('active')) {

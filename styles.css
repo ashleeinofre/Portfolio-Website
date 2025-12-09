@@ -1,15 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-
 body {
-    background-color: white;
+    background-color:#ffffff;
     margin:0;
     width: 100%;
 }
+.mb-logo-con{
+    background-color: #77abc8;
+}
+#mobile-logo {
+    display: none;
+    padding: 10px 0;
+    margin: 0;
+    justify-content: center;
+    transform: scale(.9);
+    text-shadow: 0 0 0 rgba(211, 211, 211, 0.2);
+}
 .logo {
-    background-image: url(/Images/dark-blue-wide-background-with-radial-blurred-gradient-vector.jpg);
+    font-family: Plus Jakarta Sans;
+    letter-spacing: -0.04em;
+    background-image: url(/Images/whiteandblue.jpg);
     background-size: cover;
     background-clip: text;
     color: transparent;
@@ -27,8 +35,8 @@ body {
     background-color: #77abc8;
     border-radius: 45px;
     font-family: Outfit;
-    margin: 20px auto;
-    width: 65%;
+    margin: 30px auto 0px;
+    width: fit-content;
     border: 1px solid rgb(255, 255, 255);
     padding: 0px 10px;
 }
@@ -56,6 +64,57 @@ body {
     border-color: white;
 }
 
+/* Welcome Contents <----------------------------------------------------------------> */
+.welcome-container{
+    position: relative;
+}
+.content-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    position: relative;
+    margin-top: 40px;
+}
+
+.h1-child{
+    font-family: Plus Jakarta Sans;
+    color: #77abc8;
+    text-align: center;
+    font-size: clamp(2rem, 8vw, 7.875rem);
+    z-index: 1;
+    position: absolute; 
+    margin: 0;
+    left: 150px;
+    bottom: 70%;
+    letter-spacing: -0.04em;
+    font-weight: 900;
+}
+
+.img-parent{
+    width: clamp(200px, 20vw, 450px);
+    height: auto;
+    position: relative;
+    left: 20%;
+    z-index: 2;
+    margin-top: 60px;
+}
+.desc-con{
+    width: 35%;
+    position: relative;
+    left: 20%;
+    margin-top: 8%;
+    text-align: justify;
+    font-family: Outfit;
+    font-size: clamp(14px, 2vw, 16px);
+    transition: font-size 0.3s ease-in-out;
+}
+.welcome-container p{
+    position: relative;
+    margin: 0;
+}
+
+
+
 /* Icons on contact < ------------------------------------------------------------------ >*/
 
 #contactBtn {
@@ -69,7 +128,7 @@ body {
 }
 
 #contactBtn.active {
-    width: 210px;
+    width: 170px;
     text-align: left;
 }
 
@@ -103,7 +162,7 @@ body {
 
 /*responsive?----------------------------------------------------------->*/
 .main-menu {
-    color: #77abc8;
+    color: #ffffff;
     display: none;
     position: fixed;
     top: 20px;
@@ -119,13 +178,14 @@ body {
 .main-menu span {
     height: 4px;
     width: 100%;
-    background-color: #77abc8;
+    background-color: #ffffff;
     border-radius: 4px;
 }
 
 
 @media screen and (max-width: 1125px) {
 
+/* responsive welcome container <---------------------> */
     #contactBtn.active{
     width: 170px;
 }
@@ -166,14 +226,7 @@ body {
         flex-direction: column;
         gap: 10px;
     }
-
- 
-    .logo {
-        display: none;
-        color: white;
-    }
-
-    
+  
     .nav-bar.active .logo {
         display: block;
         margin-bottom: 25px;
@@ -184,5 +237,35 @@ body {
         text-align: center;
         padding: 8px 12px;
         border-radius: 25px;
+    }
+    .desc-con {
+        width: 80%;
+        top: 50px;
+        text-align: center;
+        margin: 0 auto;
+        left: 0;
+    }
+    .content-wrapper {
+        flex-direction: column;
+        margin-top: 0;
+        gap: 0;
+    }
+    .img-parent{
+        margin: 0 auto;
+        top: 0;
+        left: 0;
+    }
+    .welcome-container p{
+        bottom: 40px;
+    }
+    .welcome-container{
+        align-items: center;
+    }
+    .h1-child{
+        position: relative;
+        left: 0;
+}
+    #mobile-logo{
+        display: flex;
     }
 }
